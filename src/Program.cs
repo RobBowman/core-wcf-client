@@ -7,4 +7,4 @@ var client  = new NumberConversionSoapTypeClient(NumberConversionSoapTypeClient.
 Console.WriteLine("Going to call the web service...");
 var response = await client.NumberToWordsAsync(46);
 
-Console.WriteLine($"The response is: {response.Body.NumberToWordsResult}");;
+Console.WriteLine($"The response is: {response.Body.NumberToWordsResult}");
