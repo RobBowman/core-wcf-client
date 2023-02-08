@@ -30,7 +30,7 @@ namespace Company.Function
 
             var result = await client.NumberToWordsAsync(46);
 
-            response.WriteString($"Response={result.ToString()}");
+            response.WriteString($"Response={result.Body.NumberToWordsResult}");
 
 
             return response;
