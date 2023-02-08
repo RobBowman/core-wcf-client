@@ -1,4 +1,5 @@
-﻿using ServiceReference;
+﻿using System;
+using ServiceReference;
 // Instantiate the Service wrapper specifying the binding and optionally the Endpoint URL. The BasicHttpBinding could be used instead.
 
 var client  = new NumberConversionSoapTypeClient(NumberConversionSoapTypeClient.EndpointConfiguration.NumberConversionSoap,
