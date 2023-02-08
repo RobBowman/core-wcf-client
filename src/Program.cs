@@ -1,11 +1,7 @@
-﻿using System;
-using ServiceReference;
-// Instantiate the Service wrapper specifying the binding and optionally the Endpoint URL. The BasicHttpBinding could be used instead.
+using Microsoft.Extensions.Hosting;
 
-var client  = new NumberConversionSoapTypeClient(NumberConversionSoapTypeClient.EndpointConfiguration.NumberConversionSoap,
-            "https://www.dataaccess.com/webservicesserver/NumberConversion.wso");
+var host = new HostBuilder()
+    .ConfigureFunctionsWorkerDefaults()
+    .Build();
 
-Console.WriteLine("Going to call the web service...");
-var response = await client.NumberToWordsAsync(46);
-
-Console.WriteLine($"The response is: {response.Body.NumberToWordsResult}");
+host.Run();
